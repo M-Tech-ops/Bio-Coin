@@ -47,11 +47,11 @@
     <div class="container mx-auto px-4 py-8">
         <div class="flex justify-between items-center mb-8">
             <h2 class="text-2xl font-bold">Your Waste History</h2>
-            <button class="teal-bg text-white px-4 py-2 rounded-md hover:bg-teal-700 flex items-center hovered-element" onclick="document.getElementById('report-modal').classList.remove('hidden')">
+            <a href="waste-upload.html" class="teal-bg text-white px-4 py-2 rounded-md hover:bg-teal-700 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus mr-2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                 New Report
-            </button>
-        </div>
+            </a>
+</div>
 
         <!-- Filter Options -->
         <div class="bg-white rounded-xl shadow-md p-4 mb-8">
@@ -134,7 +134,7 @@
                                 +85
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                <a href="#" class="teal-text hover:text-teal-700 mr-3">View</a>
+                                <a href="trash-gallery.html" class="teal-text hover:text-teal-700 mr-3">View</a>
                                 <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
                             </td>
                         </tr>
@@ -258,7 +258,7 @@
                                 -
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                <a href="#" class="teal-text hover:text-teal-700 mr-3">View</a>
+                                <a href="trash-gallery.html" class="teal-text hover:text-teal-700 mr-3">View</a>
                                 <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
                             </td>
                         </tr>
@@ -291,64 +291,6 @@
             </div>
         </div>
     </div>
-
-    <!-- New Report Modal -->
-    <div id="report-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-xl p-6 max-w-md w-full">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-bold">New Waste Report</h3>
-                <button onclick="document.getElementById('report-modal').classList.add('hidden')" class="text-gray-500 hover:text-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </button>
-            </div>
-            
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Waste Type</label>
-                    <select class="border border-gray-300 rounded-md px-3 py-2 w-full">
-                        <option>Plastic</option>
-                        <option>Paper</option>
-                        <option>Metal</option>
-                        <option>Glass</option>
-                        <option>Organic</option>
-                    </select>
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Weight (kg)</label>
-                    <input type="number" class="border border-gray-300 rounded-md px-3 py-2 w-full" placeholder="Enter weight">
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Upload Evidence</label>
-                    <div class="border-2 border-dashed border-gray-300 rounded-md p-4 text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload mx-auto mb-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                        <p class="text-sm text-gray-500">Drag & drop photo or click to upload</p>
-                        <input type="file" class="hidden" id="file-upload">
-                    </div>
-                </div>
-                
-                <div class="flex items-center justify-center space-x-4">
-                    <button class="flex items-center justify-center p-3 bg-gray-100 rounded-full hover:bg-gray-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-camera"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                    </button>
-                    <button class="flex items-center justify-center p-3 bg-gray-100 rounded-full hover:bg-gray-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize-2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
-                    </button>
-                </div>
-                
-                <div class="pt-4 flex justify-end space-x-3">
-                    <button onclick="document.getElementById('report-modal').classList.add('hidden')" class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50">
-                        Cancel
-                    </button>
-                    <button class="teal-bg text-white px-4 py-2 rounded-md hover:bg-teal-700">
-                        Submit Report
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
         feather.replace();
         
@@ -356,6 +298,19 @@
         document.querySelector('.border-dashed').addEventListener('click', function() {
             document.getElementById('file-upload').click();
         });
+
+        // Check for coin update in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const newCoins = urlParams.get('coins');
+        if (newCoins) {
+            // Update the coins display (this would normally be done via backend)
+            const coinElements = document.querySelectorAll('.yellow-text');
+            coinElements.forEach(el => {
+                if (el.textContent.includes('1,250')) {
+                    el.textContent = newCoins;
+                }
+            });
+        }
     </script>
 </body>
 </html>
